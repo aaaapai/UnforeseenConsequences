@@ -1,6 +1,7 @@
 name: Android CI
 
 on:
+  push:
   workflow_dispatch:
          inputs:
             description:
@@ -45,4 +46,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: mod
-          path: build/outputs/*
+          path: |
+                **/*.jar
